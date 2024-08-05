@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 2</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="/src/assets/jsIconGreen.svg" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Punto 1: Calculadora de Días entre fechas</h1>
+    <form id="date-form">
+
+        <label for="start-date">Fecha Inicio:</label>
+        <input type="date" name="start-date" id="start-date" placeholder="start-date" required>
+        <br>
+        <label for="start-end">Fecha Final:</label>
+        <input type="date" name="end-date" id="end-date" placeholder="end-date" required>
+        <br>
+        <button type="button" onclick="calculateDays()">Calcular</button>
+        <br>
+        <label for="result">Número de Días:</label>
+        <input type="text" name="result" id="result" readonly>
+    </form>
+    <script src="/parte2Taller/src/js/index.js"></script>
+</body>
+
+</html>

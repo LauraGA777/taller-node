@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Página Estática y API Array</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="/src/assets/jsIconGreen.svg" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Taller Página Estática y API Array</h1>
+
+    <!-- Menú de Contenidos -->
+    <div class="indice" id="indice">
+        <h2 class="titulo">Menú de Contenidos Detallado</h2>
+        <ul>
+            <li><a href="#indice1">1. Introducción a Node.js</a>
+                <ul>
+                    <li><a href="#subindice1.1">1.1 ¿Qué es Node.js?</a></li>
+                    <li><a href="#subindice1.2">1.2 ¿Cómo se crea un proyecto en Node.js?</a></li>
+                    <li><a href="#subindice1.3">1.3 ¿Para qué es el package.json?</a></li>
+                </ul>
+            </li>
+            <li><a href="#indice2">2. Express.js</a>
+                <ul>
+                    <li><a href="#subindice2.1">2.1 ¿Qué es Express y para qué se utiliza?</a></li>
+                    <li><a href="#subindice2.2">2.2 Escriba el código de un servidor básico en Express.</a></li>
+                    <li><a href="#subindice2.3">2.3 ¿Cómo se instala Express en un proyecto Node.js?</a></li>
+                </ul>
+            </li>
+            <li><a href="#indice3">3. APIs y HTTP</a>
+                <ul>
+                    <li><a href="#subindice3.1">3.1 ¿Qué es una API?</a></li>
+                    <li><a href="#subindice3.2">3.2 ¿Qué es API REST?</a></li>
+                    <li><a href="#subindice3.3">3.3 ¿Cuáles son los métodos HTTP?</a></li>
+                </ul>
+            </li>
+            <li><a href="#indice4">4. Desarrollo y Testeo de APIs</a>
+                <ul>
+                    <li><a href="#subindice4.1">4.1 Métodos POST y PUT en una API REST: ¿Cómo testear su funcionamiento
+                            rápidamente?</a></li>
+                    <li><a href="#subindice4.2">4.2 Crear una API para devolver el promedio de temperaturas: ¿Cuál
+                            método HTTP emplearía?</a></li>
+                </ul>
+            </li>
+            <li><a href="#indice5">5. Preguntas de Verdadero/Falso</a>
+                <ul>
+                    <li><a href="#subindice5.1">5.1 JSON es un lenguaje de programación para crear APIs.</a></li>
+                    <li><a href="#subindice5.2">5.2 Express es un Framework para Node.js.</a></li>
+                    <li><a href="#subindice5.3">5.3 JSON es un formato empleado para intercambiar datos entre lenguajes
+                            de programación.</a></li>
+                </ul>
+            </li>
+            <li><a href="#indice6">6. API de Medicamentos</a>
+                <ul>
+                    <li><a href="#subindice6.1">6.1 Testeo del método GET de la API.</a></li>
+                    <li><a href="#subindice6.2">6.2 Inserciones a la API de medicamentos.</a></li>
+                    <li><a href="#subindice6.3">6.3 Conversión del valor de la clave `cantidad_solicitada`.</a></li>
+                    <li><a href="#subindice6.4">6.4 Listado en minúsculas del campo `nombre_comercial`.</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contenido Detallado -->
+    <div class="contenido">
+        <div id="indice1"><a href="#indice">
+                <h2>1. Introducción a Node.js</h2>
+            </a>
+
+            <div id="subindice1.1"><a href="#indice">
+                    <h3> ¿Qué es Node.js?</h3>
+                </a>
+                <p>
+                    Node.js es un entorno de ejecución para JavaScript basado en el motor V8 de Google Chrome. Permite
+                    ejecutar código JavaScript en el servidor, fuera del navegador. Es especialmente útil para construir
+                    aplicaciones web escalables y de alto rendimiento gracias a su modelo de I/O no bloqueante y
+                    orientado a eventos.
+                </p>
+            </div>
+            <div id="subindice1.2"><a href="#indice">
+                    <h3> ¿Cómo se crea un proyecto en Node.js?</h3>
+                </a>
+                <p>
+                    <b> Crea una carpeta para tu proyecto:</b> Usa mkdir nombre-del-proyecto. <br>
+                    <b>Inicializa el proyecto:</b> Ejecuta npm init para crear un archivo package.json. <br> Usa npm
+                    init -y para aceptar las configuraciones predeterminadas.
+                </p>
+            </div>
+            <div id="subindice1.3"><a href="#indice">
+                    <h3> ¿Para qué es el package.json?</h3>
+                </a>
+                <p>
+                    El archivo package.json es el corazón de un proyecto Node.js. Contiene información importante sobre
+                    el proyecto, como el nombre, versión, dependencias, scripts, y más. Es utilizado por npm <b>(Node
+                        Package Manager)</b> para gestionar las dependencias del proyecto y ejecutar scripts.
+                </p>
+            </div>
+        </div>
+
+        <div id="indice2"><a href="#indice">
+                <h2>2. Express.js</h2>
+            </a>
+            <div id="subindice2.1"><a href="#indice">
+                    <h3> ¿Qué es Express y para qué se utiliza?</h3>
+                </a>
+                <p>Express es un framework para Node.js que simplifica la creación de aplicaciones web y APIs. Facilita
+                    la gestión de rutas, middleware, y manejadores de solicitudes y respuestas, ayudando a construir
+                    aplicaciones de manera más rápida y organizada.</p>
+            </div>
+            <div id="subindice2.2"><a href="#indice">
+                    <h3> Escriba el código de un servidor básico en Express.</h3>
+                </a>
+                <pre><code>const express = require('express');
+                const app = express();
+                const port = 3000;
+            
+                app.get('/',(req,res)=>{
+                    res.send('Hola Mundo');
+                });
+            
+                app.listen(port,()=>{
+                    console.log(`Server is running at http://localhost:${port}`)
+                })</code></pre>
+            </div>
+            <div id="subindice2.3"><a href="#indice">
+                    <h3> ¿Cómo se instala Express en un proyecto Node.js?</h3>
+                </a>
+                <p>
+                    Estar en el directorio de tu proyecto.
+                    Ejecuta el siguiente comando en tu <br>
+                    terminal:<b>npm install express.</b>
+                </p>
+            </div>
+        </div>
+
+        <div id="indice3"><a href="#indice">
+                <h2>3. APIs y HTTP</h2>
+            </a>
+            <div id="subindice3.1"><a href="#indice">
+                    <h3> ¿Qué es una API?</h3>
+                </a>
+                <p>
+                    Una API <b>(Interfaz de Programación de Aplicaciones)</b> es un conjunto de definiciones y
+                    protocolos que permite a diferentes aplicaciones comunicarse entre sí. Proporciona una manera
+                    estandarizada de interactuar con el software a través de funciones o métodos predefinidos.
+                </p>
+            </div>
+            <div id="subindice3.2"><a href="#indice">
+                    <h3> ¿Qué es API REST?</h3>
+                </a>
+                <p>Una API REST <b>(Representational State Transfer)</b> es un estilo de arquitectura para diseñar APIs.
+                    Utiliza métodos HTTP y URLs para interactuar con los recursos. Las APIs REST se centran en la
+                    transferencia de representación de recursos, como JSON o XML, y son conocidas por su simplicidad y
+                    escalabilidad.
+                </p>
+            </div>
+            <div id="subindice3.3"><a href="#indice">
+                    <h3> ¿Cuáles son los métodos HTTP?</h3>
+                </a>
+                <p>
+                    <b>GET:</b> Solicita datos de un recurso. <br>
+                    <b>POST:</b> Envía datos para crear un nuevo recurso. <br>
+                    <b>PUT:</b> Actualiza un recurso existente. <br>
+                    <b>DELETE:</b> Elimina un recurso. <br>
+                    <b>PATCH:</b> Realiza una actualización parcial de un recurso. <br>
+                    <b>OPTIONS:</b> Obtiene las opciones de comunicación disponibles para el recurso.
+                </p>
+            </div>
+        </div>
+
+        <div id="indice4"><a href="#indice">
+                <h2>4. Desarrollo y Testeo de APIs</h2>
+            </a>
+            <div id="subindice4.1"><a href="#indice">
+                    <h3> Métodos POST y PUT en una API REST: ¿Cómo testear su funcionamiento rápidamente?</h3>
+                </a>
+                <p>herramientas de prueba de API Como POSTMAN o Thunderclient</p>
+            </div>
+            <div id="subindice4.2"><a href="#indice">
+                    <h3>Crear una API para devolver el promedio de temperaturas: ¿Cuál método HTTP emplearía?</h3>
+                </a>
+                <p>Método GET</p>
+            </div>
+        </div>
+
+        <div id="indice5"><a href="#indice">
+                <h2>5. Preguntas de Verdadero/Falso</h2>
+            </a>
+            <div id="subindice5.1"><a href="#indice">
+                    <h3>JSON es un lenguaje de programación para crear APIs.</h3>
+                </a>
+                <p>FALSO ❌</p>
+            </div>
+            <div id="subindice5.2"><a href="#indice">
+                    <h3>Express es un Framework para Node.js.</h3>
+                </a>
+                <p>VERDADERO ✔️</p>
+            </div>
+            <div id="subindice5.3"><a href="#indice">
+                    <h3>JSON es un formato empleado para intercambiar datos entre lenguajes de programación.</h3>
+                </a>
+                <p>VERDADERO ✔️
+                </p>
+            </div>
+        </div>
+        <div id="indice6"><a href="#indice">
+                <h2>6. API de Medicamentos Vitales No Disponibles</h2>
+            </a>
+            <div id="subindice6.1"><a href="#indice">
+                    <h3> Testeo del método GET de la API</h3>
+                </a>
+                <p>Teste el método GET de la API <a
+                        href="https://www.datos.gov.co/resource/sdmr-tfmf.json">https://www.datos.gov.co/resource/sdmr-tfmf.json</a>.
+                    Se obtuvo un <b>array de objetos </b></p>
+            </div>
+            <div id="subindice6.2"><a href="#indice">
+                    <h3>Inserciones a la API de medicamentos</h3>
+                </a>
+                <p>Su jefe le solicita que realice inserciones a la API de medicamentos. ¿Lo podría realizar? Justifique
+                    la respuesta. <br><br>
+                    No es posible realizar inserciones a esta API. Las APIs de datos abiertos están destinadas a
+                    proporcionar acceso a datos ya existentes para consulta, análisis y visualización. Las inserciones o
+                    actualizaciones suelen requerir un endpoint diferente, generalmente con autenticación y autorización
+                    adecuadas</p>
+            </div>
+            <div id="subindice6.3"><a href="#indice">
+                    <h3>Conversión de formato para cantidad_solicitada</h3>
+                </a>
+                <p>Le solicitan que analice si el formato del valor de la clave <code>cantidad_solicitada</code>
+                    requiere alguna conversión para realizar cálculos en el frontend. <br><br>
+                    Sí, el valor de la clave <code>cantidad_solicitada</code> en la respuesta de la API está en formato de cadena.
+                    Para realizar cálculos en el frontend, necesita convertir esta cadena a un número usando funciones
+                    como parseInt() o parseFloat() según el tipo de valor que necesites manejar.</p>
+            </div>
+            <div id="subindice6.4"><a href="#indice">
+                    <h3>Listado de valores en minúsculas</h3>
+                </a>
+                <p>Le solicitan listar en un HTML los valores del campo <code>nombre_comercial</code> pero en
+                    minúsculas. ¿Qué haría, agregar código al frontend que programará o solicitaría a los proveedores de
+                    la API que conviertan los valores del campo a minúsculas? <br><br>
+
+                    Realizar la conversión a minúsculas en el frontend es la mejor opción, usando toLowerCase() para
+                    obtener el resultado.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

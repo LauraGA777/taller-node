@@ -1,0 +1,88 @@
+/* .indice{
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+.contenido{
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.indice .titulo{
+    font-weight: 700;
+    text-align: center;
+}
+.indice li,.indice ul,.indice ul li{
+    padding: 0 5px;
+    list-style: outside none none !important;
+} */
+
+/* General styles for the content */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Styles for the index section */
+
+.indice{
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenido{
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Styles for code blocks */
+pre {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+pre code {
+    display: block;
+}
+
+/* Styles for content sections */
+h1{
+    color: #333;
+    text-align: center;
+}
+h2 {
+    color: #333;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #666;
+    margin-top: 20px;
+}
+
+p {
+    margin: 10px 0;
+}

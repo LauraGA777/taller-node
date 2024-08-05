@@ -1,0 +1,90 @@
+1. ¿Qué es Node.js?
+
+    Node.js es un entorno de ejecución para JavaScript basado en el motor V8 de Google Chrome. Permite ejecutar código JavaScript en el servidor, fuera del navegador. Es especialmente útil para construir aplicaciones web escalables y de alto rendimiento gracias a su modelo de I/O no bloqueante y orientado a eventos.
+
+2. ¿Cómo se crea un proyecto en node?
+
+    Crea una carpeta para tu proyecto: Usa mkdir nombre-del-proyecto para crear una nueva carpeta y cd nombre-del-proyecto para entrar en ella.
+    Inicializa el proyecto: Ejecuta npm init para crear un archivo package.json. Puedes usar npm init -y para aceptar las configuraciones predeterminadas
+
+3. ¿Para qué es el package json?
+
+    El archivo package.json es el corazón de un proyecto Node.js. Contiene información importante sobre el proyecto, como el nombre, versión, dependencias, scripts, y más. Es utilizado por npm (Node Package Manager) para gestionar las dependencias del proyecto y ejecutar scripts.
+
+4. ¿Qué es express y para qué se utiliza?
+
+    Express es un framework para Node.js que simplifica la creación de aplicaciones web y APIs. Facilita la gestión de rutas, middleware, y manejadores de solicitudes y respuestas, ayudando a construir aplicaciones de manera más rápida y organizada.
+
+5. Escriba el código de un servidor básico en express.
+
+    const express = require('express');
+    const app = express();
+    const port = 3000;
+
+    app.get('/',(req,res)=>{
+        res.send('Hola Mundo');
+    });
+
+    app.listen(port,()=>{
+        console.log(`Server is running at http://localhost:${port}`)
+    })
+
+6. ¿Qué es una API?
+
+    Una API (Interfaz de Programación de Aplicaciones) es un conjunto de definiciones y protocolos que permite a diferentes aplicaciones comunicarse entre sí. Proporciona una manera estandarizada de interactuar con el software a través de funciones o métodos predefinidos.
+
+7. ¿Cuáles son los métodos http?
+
+    Los métodos HTTP son las acciones que se pueden realizar sobre los recursos en un servidor. Los más comunes son:
+
+    GET: Solicita datos de un recurso.
+    POST: Envía datos para crear un nuevo recurso.
+    PUT: Actualiza un recurso existente.
+    DELETE: Elimina un recurso.
+    PATCH: Realiza una actualización parcial de un recurso.
+    OPTIONS: Obtiene las opciones de comunicación disponibles para el recurso.
+
+8. ¿Qué es API REST?
+
+    Una API REST (Representational State Transfer) es un estilo de arquitectura para diseñar APIs. Utiliza métodos HTTP y URLs para interactuar con los recursos. Las APIs REST se centran en la transferencia de representación de recursos, como JSON o XML, y son conocidas por su simplicidad y escalabilidad.
+
+9. ¿Cómo se instala express en un proyecto Node.js?
+
+    Estar en el directorio de tu proyecto.
+    Ejecuta el siguiente comando en tu terminal: npm install express.
+
+10. Le solicitan crear los métodos POST y PUT para una API REST. ¿Cómo testear su
+funcionamiento rápidamente?
+
+    Con POSTMAN
+
+11. Le solicitan que realice una api que devuelva el promedio de temperaturas de un
+array en el que se encuentran almacenadas las temperaturas por día ¿Cuál método
+http emplearía?
+
+    Método GET
+
+12. Responda Falso o Verdadero:
+
+JSON es un lenguaje de programación para crear APIS. FALSO ❌
+Express es un Framework para Node.js. VERDADERO ✔️
+JSON es un formato empleado para intercambiar datos entre lenguajes de
+programación. VERDADERO ✔️
+
+Testeo del método GET de la API
+
+Teste el método GET de la API ¿Qué obtuvo?.
+
+Se obtuvo un array de objetos.
+
+Su jefe le solicita que realice inserciones a la API de medicamentos. ¿Lo podría realizar? Justifique la respuesta.
+
+No es posible realizar inserciones a esta API. Las APIs de datos abiertos están destinadas a proporcionar acceso a datos ya existentes para consulta, análisis y visualización. Las inserciones o actualizaciones suelen requerir un endpoint diferente, generalmente con autenticación y autorización adecuadas.
+
+Le solicitan que analice si el formato del valor de la clave cantidad_solicitada requiere alguna conversión para realizar cálculos en el frontend.
+
+Sí, el valor de la clave cantidad_solicitada en la respuesta de la API está en formato de cadena. Para realizar cálculos en el frontend, necesita convertir esta cadena a un número usando funciones como parseInt() o parseFloat() según el tipo de valor que necesites manejar.
+
+Le solicitan listar en un HTML los valores del campo nombre_comercial pero en minúsculas. ¿Qué haría, agregar código al frontend que programará o solicitaría a los proveedores de la API que conviertan los valores del campo a minúsculas?
+
+Realizar la conversión a minúsculas en el frontend es la mejor opción, usando toLowerCase() para obtener el resultado.
