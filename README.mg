@@ -1,4 +1,8 @@
-#Repositorio Taller Node.JS
+# Repositorio Taller Node.JS
+
+Todos los detalles y el código correspondiente se encuentran en este repositorio.
+
+## Parte 1 Taller
 
 1. ¿Qué es Node.js? ✅
 2. ¿Cómo se crea un proyecto en Node? ✅
@@ -21,13 +25,15 @@
    - c. Le solicitan que analice si el formato del valor de la clave `cantidad_solicitada` requiere alguna conversión para realizar cálculos en el frontend. ¿Qué respondería? ✅
    - d. Le solicitan listar en un HTML los valores del `nombre_comercial` pero en minúsculas. ¿Qué haría, agregar código al frontend que programará o solicitaría a los proveedores de la API que conviertan los valores del campo a minúsculas? ✅
 
-## Taller
+## Parte 2 Taller
 
 1. Página estática. ✅
    - Crear un proyecto en Node y dentro de ese proyecto un formulario que permita ingresar en un campo una fecha inicial y en otro campo una fecha final.
    - Luego calcular el número de días que hay entre las 2 fechas y mostrar el resultado en un campo.
-   
-2. Crear un proyecto en Node llamado facturación. ✅
+
+## Parte 3 Taller
+
+2. Crear un proyecto en Node llamado **facturación**. ✅
    - Crear en Node el método GET que calcule y retorne en JSON la suma total de número de unidades facturadas. ✅
    - Crear en Node el método GET que calcule y retorne en JSON el valor total facturado. ✅
    - Crear en Node el método GET que retorne los datos de una factura de venta de acuerdo al ID a consultar. ✅
@@ -35,4 +41,4 @@
    - Crear el método para insertar facturas en el array siguiendo la misma estructura de los objetos del ejemplo. ✅
    - Crear el método PUT que permita realizar al usuario un decremento entre un 1% y 10% al valor total de todas las facturas. El % lo debe enviar al testear la API. ✅
 
-Todos los detalles y el código correspondiente se encuentran en este repositorio.
+
