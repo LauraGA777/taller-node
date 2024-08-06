@@ -41,7 +41,8 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/',(req,res)=>{
-    res.end('Hola Mundo');
+    console.log(req.url);
+    res.end('Hola Laura');
 })
 
 /* Punto 2 */
